@@ -20,7 +20,7 @@ function multiRecursiva(x, n){
     }
 
     if(x<n){
-        var temp = n
+        let temp = n
         n = x
         x = temp
     }

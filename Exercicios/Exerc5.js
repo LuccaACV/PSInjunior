@@ -6,7 +6,7 @@ Teste 5 números inteiros aleatórios. Os testes:
 ● Caso contrário imprima nada.
 */
 
-for(var cont=1; cont<=5; cont++){
+for(let cont=1; cont<=5; cont++){
     var tempNum = prompt("Entre com o "+cont+"°: ")
     var tempNum = parseInt(tempNum)
 

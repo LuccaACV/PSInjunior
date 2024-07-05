@@ -7,7 +7,7 @@ uma linha em branco e em seguida, os valores na sequência
 var vetorSeq = []
 var vetorOrd = []
 
-for(var i = 1; i<=5; i++){
+for(let i = 1; i<=5; i++){
     var temp = prompt("Adicione o "+i+"° valor: ")
     vetorSeq.push(temp)
     vetorOrd.push(temp)

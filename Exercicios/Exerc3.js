@@ -6,7 +6,7 @@ média aritmética dessas notas for maior ou igual que 6 imprima
 */
 
 var media = 0.0
-for(var cont = 1; cont<=3; cont++){
+for(let cont = 1; cont<=3; cont++){
     var temp = prompt("Insira o valor da "+ cont +"° prova: ")
     media = parseFloat(temp) + media
 }
