@@ -11,24 +11,30 @@ b. Caso teste 2 : [ [4,0], [-1,-1] ] e [ [-1,3], [2,7] ]
 multiplicadas dão [ [-4,12], [-1,-10]] 
 */
 
-var matriz1 = [[2,-1],[2,0]]
-var col1 = matriz1.length +1
-var linha1 = matriz1[0].length +1
-var matriz2 = [[2,3],[-2,1]]
-var col2 = matriz2.length +1
-var linha2 = matriz2[0].length +1
-var matrizC = []
+var matrizA = [ [4,0], [-1,-1] ]
+var linhaA = matrizA.length
+var colunaA = matrizA[0].length
 
-/*
-    2   -1  ||   2  3        (2*2+-1*-2)(2*3+-1*1)  6  5
-    2    0  ||  -2  1        (2*2+0*-2)(2*3+0*1)    4  6
-*/
-console.log("coluna "+col1+"linha"+linha1)
-console.log("coluna "+col2+"linha"+linha2)
-/*
-if(matrizA[0].length==matrizB.length){
-    matrizC[0][0]=(matrizA[0][0]*matrizB[0][0])+(matrizA[0][1]*matrizB[1][0])
-    matrizC[0][1]=(matrizA[0][0]*matrizB[0][1])+(matrizA[0][1]*matrizB[1][1])
-    matrizC[1][0]=(matrizA[1][0]*matrizB[0][0])+(matrizA[1][1]*matrizB[1][0])
-    matrizC[1][1]=(matrizA[1][0]*matrizB[0][1])+(matrizA[1][1]*matrizB[1][1])
-}*/
+var matrizB = [ [-1,3], [2,7] ]
+var linhaB = matrizB.length
+var colunaB = matrizB[0].length 
+
+var matrizC = [] //qtdLinha da primeira com a qtdLinha da segunda
+
+for(let i = 0; i<linhaA;i++){
+    matrizC.push(Array(colunaB))
+}
+for(let i = 0; i<linhaA;i++){
+    for(let j = 0; j<colunaB;j++){
+        var temp = 0
+        for(let k = 0; k<colunaA;k++){
+            temp += (matrizA[i][k])*(matrizB[k][j])
+            console.log(temp)
+        }
+        matrizC[i][j] = temp
+    }
+}
+
+for(let i = 0; i<matrizC.length; i++){
+    console.log(matrizC[i])
+}
