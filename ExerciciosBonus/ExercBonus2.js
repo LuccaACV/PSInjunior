@@ -27,7 +27,6 @@ function multiRecursiva(x, n){
 
     if(n>0){
         x = x + multiRecursiva(x, --n)
-        console.log("valor X = "+ x)
         return x
     }
 
