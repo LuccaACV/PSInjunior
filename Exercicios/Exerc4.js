@@ -12,3 +12,24 @@ entre parênteses, a sua classe.
 
 Por exemplo, o array deverá ficar assim: ["Achilles (Warrior)", "Agni (Mage)", ...
 */
+
+//Importando o objeto gods para o Exercicio 4 
+import { exportaDeuses } from './Exercicio4/arquivo_exercicio_4.js';
+const deuses = exportaDeuses()
+
+//Q1
+for(let deus of deuses){
+    console.log(deus.name+": "+deus.features.length)
+}
+
+//Q2
+let num = 0
+for(let Deus of deuses){
+    for(let cont in Deus.roles){
+        if(Deus.roles[cont]=="Mid"){
+            let json = JSON.stringify(Deus)
+            console.log(num+" "+json)
+            num++
+        }
+    }
+}

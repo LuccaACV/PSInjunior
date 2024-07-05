@@ -960,3 +960,7 @@ const gods = [
     features: [],
   },
 ];
+
+export function exportaDeuses() {
+  return gods
+}
