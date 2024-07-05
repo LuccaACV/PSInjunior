@@ -30,15 +30,15 @@ var linhaA = prompt("Qual a quantidade de linhas da 1° Matriz?")
 var colunaA = prompt("Qual a quantidade de colunas da 1° Matriz?")
 var linhaA = parseInt(linhaA)
 var colunaA = parseInt(colunaA)
+var matrizA = criandoMatriz(linhaA,colunaA)
 
 var linhaB = prompt("Qual a quantidade de linhas da 2° Matriz?")
 var colunaB = prompt("Qual a quantidade de colunas da 2° Matriz?")
 var linhaB = parseInt(linhaB)
 var colunaB = parseInt(colunaB)
+var matrizB = criandoMatriz(linhaB,colunaB)
 
 if(colunaA==linhaB){
-    var matrizA = criandoMatriz(linhaA,colunaA)
-    var matrizB = criandoMatriz(linhaB,colunaB)
     var matrizC = [] 
     for(let i = 0; i<linhaA;i++){
         matrizC.push(Array(colunaB))
