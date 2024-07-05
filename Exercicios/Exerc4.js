@@ -16,7 +16,7 @@ Por exemplo, o array deverá ficar assim: ["Achilles (Warrior)", "Agni (Mage)", 
 //Importando o objeto gods para o Exercicio 4 
 import { exportaDeuses } from './Exercicio4/arquivo_exercicio_4.js';
 const deuses = exportaDeuses()
-
+/*
 //Q1
 for(let deus of deuses){
     console.log(deus.name+": "+deus.features.length)
@@ -32,4 +32,41 @@ for(let Deus of deuses){
             num++
         }
     }
+}
+
+//Q3
+var arrayPanteao = []
+for(let Deus of deuses){
+    let cont = 0;
+    for(let CompString of arrayPanteao){
+        if(Deus.pantheon==CompString){
+            cont++;
+        }
+    }
+    if(cont==0){
+        arrayPanteao.push(Deus.pantheon)
+    }
+}
+let num = 0
+arrayPanteao.sort()
+console.log(arrayPanteao)
+for(let compPanteao of arrayPanteao){
+    for(let Deus of deuses){
+        if(Deus.pantheon==compPanteao){
+            let json = JSON.stringify(Deus)
+            console.log(num+" "+json)
+            num++
+        }
+    }
+}
+*/
+
+//Q4
+var arrayNomeFunc = []
+for(let Deus of deuses){
+    let stringNome = Deus.name+" ("+Deus.class+")"
+    arrayNomeFunc.push(stringNome)
+}
+for(let nomeDeus of arrayNomeFunc){
+    console.log(nomeDeus)
 }
